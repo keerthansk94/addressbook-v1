@@ -11,6 +11,7 @@ pipeline{
         stage('Compile'){
             steps{
                 echo "compiling the code"
+                sh 'mvn compile'
             }
         }
         stage('code review'){
