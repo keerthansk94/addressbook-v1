@@ -2,6 +2,9 @@ pipeline{
     agent{
         label 'linux_node'
     }
+    tools{
+        maven "my_maven"
+    }
     parameters{
         string(name:'Env' , defaultValue: 'Test', description : 'Enviroment name' )
         booleanParam(name: 'executeTests', defaultValue: true, description: 'decise to run test')
