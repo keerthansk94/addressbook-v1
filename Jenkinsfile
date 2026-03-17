@@ -20,6 +20,7 @@ pipeline{
         stage('code review'){
             steps{
                 echo "Reviewing the code"
+                sh "mvn pmd:pmd"
             }
         }
         stage('test'){
