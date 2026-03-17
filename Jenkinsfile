@@ -1,5 +1,7 @@
 pipeline{
-    agent linux_node
+    agent{
+        label 'linux_node'
+    }
     stages{
         stage('Compile'){
             steps{
