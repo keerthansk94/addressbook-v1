@@ -1,4 +1,5 @@
 pipeline{
+    agent linux_node
     stages{
         stage('Compile'){
             steps{
