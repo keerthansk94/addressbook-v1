@@ -26,16 +26,19 @@ pipeline{
         stage('test'){
             steps{
                 echo "testing the code"
+                sh 'mvn test'
             }
         }
         stage('Coverage analysis'){
             steps{
                 echo "code coverage analysis"
+                sh 'mvn verify'
             }
         }
         stage('Package'){
             steps{
                 echo "packaging the code"
+                sh 'mvn pakage'
             }
         }
     }
