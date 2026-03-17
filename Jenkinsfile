@@ -2,7 +2,7 @@ pipeline{
     agent{
         label 'linux_node'
     }
-    parameter{
+    parameters{
         string(name:'Env' , defaulyValue: 'Test', description : 'Enviroment name' )
         booleanParam(name: 'executeTests', defaultValue: true, descriotion: 'decise to run test')
         choice(name: 'APPVERSION', choices: ['1,1','1.2','1.3'], description:'app version selection')
