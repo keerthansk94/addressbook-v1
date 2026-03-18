@@ -9,18 +9,18 @@ pipeline{
         choice(name: 'APPVERSION', choices: ['1,1','1.2','1.3'], description:'app version selection')
     }
     stages{
-        stage('Compile')
+        stage('Compile'){
             steps{
                 echo "compiling the code"
                 sh 'mvn compile'
             }
-        
-        stage('code review')
+        }
+        stage('code review'){
             steps{
                 echo "Reviewing the code"
                 sh "mvn pmd:pmd"
             }
-        
+        }
         stage('test'){
             steps{
                 echo "testing the code"
